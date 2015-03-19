@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 /**
- * start to use github
+ * start to use github.
  */
 public class MainActivity extends Activity {
 
