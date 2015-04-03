@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--头部-->
+    <RelativeLayout android:id="@+id/homef_title_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/homef_head_bar_height"
+                    android:background="@color/title_bar">
+        <org.xxh.interview.view.RoundImageView
+                android:id="@+id/homef_head_img"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/homef_head_image_width"
+                android:layout_height="@dimen/homef_head_image_height"
+                android:layout_marginLeft="@dimen/homef_head_icon_margin"
+                android:src="@drawable/head_default"/>
+        <FrameLayout android:layout_width="@dimen/homef_head_switch_bar_width"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:layout_centerVertical="true">
+            <org.xxh.interview.view.SlidingButton
+                    android:id="@+id/homef_sliding_btn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/homef_head_switch_bar_height"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="@dimen/homef_head_switch_bar_height"
+                          android:orientation="horizontal"
+                          android:gravity="center">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:textSize="18sp"
+                          android:text="最新"/>
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:textSize="18sp"
+                          android:text="最热"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageView android:id="@+id/homef_search_img"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="@dimen/homef_head_icon_margin"
+                   android:src="@drawable/homef_title_bar_search"/>
+    </RelativeLayout>
+    <!--头部结束-->
+
+    <!--内容部分-->
+    <RelativeLayout
+            android:background="#077777"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/homef_title_bar"
+            android:layout_marginBottom="@dimen/home_tab_hight"
+                    android:layout_height="match_parent">
+
+        <org.xxh.interview.view.ControlScrollViewPager
+                android:id="@+id/homef_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        </org.xxh.interview.view.ControlScrollViewPager>
+
+    </RelativeLayout>
+
+</RelativeLayout>

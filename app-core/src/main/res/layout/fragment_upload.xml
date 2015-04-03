@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:id="@+id/horizontal_v"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+<ScrollView android:id="@+id/vertical_v"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        <!--<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+
+            <!--<LinearLayout android:orientation="horizontal"-->
+                          <!--android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content">-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第1列 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第2列 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第3列 | "/>-->
+
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第4列 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第5列 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第6列 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第7列 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第8列 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第9列 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第10列 | "/>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout android:orientation="vertical"-->
+                          <!--android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content">-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第1行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第2行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第3行 | "/>-->
+
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第4行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第5行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第6行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第7行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第8行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第9行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第10行 | "/>-->
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第11行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第12行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第13行 | "/>-->
+
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第14行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第15行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第16行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第17行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第18行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第19行 | "/>-->
+
+                <!--<TextView android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:padding="5px"-->
+                          <!--android:text="第20行 | "/>-->
+
+
+        <!--</LinearLayout>-->
+        <org.xxh.interview.view.MeLinearLayout
+                      android:orientation="vertical"
+                      android:id="@+id/linerlayout"
+                      android:background="#216464"
+                      android:layout_width="200dp"
+                      android:layout_height="200dp">
+            <TextView
+                     android:id="@+id/text"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:singleLine="false"
+                     android:text=""/>
+        </org.xxh.interview.view.MeLinearLayout>
+    </ScrollView>
+</HorizontalScrollView>
+
+

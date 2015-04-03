@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+自定义属性，在gradle环境中用   http://schemas.android.com/apk/res-auto 代替
+http://schemas.android.com/apk/res/org.xxh.interview-->
+<org.xxh.interview.view.SlidingMenu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:xxhspace="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/home_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="#CCFFFF"
+        xxhspace:right_padding="50dp">
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center">
+
+        <!--菜单处理-->
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:layout_weight="1"
+                      android:background="#DAA520">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/home_head_image_margin_top"
+                          android:orientation="vertical"
+                          android:gravity="center">
+                    <org.xxh.interview.view.RoundImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="@dimen/home_head_image_width"
+                            android:layout_height="@dimen/home_head_image_height"
+                            android:src="@drawable/head_default"/>
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:gravity="center"
+                              android:text="姓名：谢欣宏"/>
+            </LinearLayout>
+            <ListView android:id="@+id/home_menu_listview"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginLeft="@dimen/home_item_left"
+                      android:layout_marginRight="@dimen/home_item_right">
+            </ListView>
+        </LinearLayout>
+
+        <!--主页内容-->
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1">
+
+            <android.support.v4.app.FragmentTabHost
+                    android:id="@android:id/tabhost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                    <FrameLayout android:id="@android:id/tabcontent"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 android:background="#CDCDC1">
+                    </FrameLayout>
+
+                    <TabWidget  android:id="@android:id/tabs"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/home_tab_hight"
+                                android:divider="@null"
+                                android:orientation="horizontal"
+                                android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+            </android.support.v4.app.FragmentTabHost>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</org.xxh.interview.view.SlidingMenu>

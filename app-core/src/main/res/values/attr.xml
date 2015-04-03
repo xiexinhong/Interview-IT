@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textKey" format="string"></attr>
+    <attr name="textValue" format="string"></attr>
+
+    <declare-styleable name="SelfEditView">
+        <attr name="textKey"></attr>
+        <attr name="textValue"></attr>
+    </declare-styleable>
+    <!--SlidingMenu-->
+    <attr name="right_padding" format="dimension"/>
+    <declare-styleable name="SlidingMenu">
+        <attr name="right_padding"/>
+    </declare-styleable>
+
+    <!--SlipButton-->
+    <declare-styleable name="SlipButton">
+        <attr name="bg" format="reference"/>
+        <attr name="slipImg" format="reference"/>
+        <attr name="slipOn" format="boolean"></attr>
+    </declare-styleable>
+
+</resources>

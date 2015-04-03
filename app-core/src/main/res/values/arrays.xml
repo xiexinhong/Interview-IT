@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="skill_category_list">
+            <item>关于面试</item>
+            <item>面试类型及应对技巧</item>
+            <item>面试题目分类详解</item>
+            <item>面试之后，未结束的战场</item>
+        </string-array>
+</resources>

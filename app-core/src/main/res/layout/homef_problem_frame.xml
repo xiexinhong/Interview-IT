@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/homef_problem_frame"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+              <!--android:text="拜拜拜拜拜拜拜拜拜拜拜拜拜拜拜拜"/>-->
+    <org.xxh.interview.view.MeListView
+              android:id="@+id/homef_problem_listview"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    </org.xxh.interview.view.MeListView>
+</FrameLayout>

@@ -3,5 +3,25 @@
 
     <string name="app_name">Interview-IT</string>
     <string name="hello_world">Hello Android!</string>
+    
+    <!--home页用的字符-->
+    <string name="home_menu_label">选择标签</string>
+    <string name="home_menu_upload_content">上传内容</string>
+    <string name="home_menu_praise">我赞过的</string>
+    <string name="home_menu_store">我的收藏</string>
+    <string name="home_menu_setting">环境设置</string>
+    <string name="home_menu_close">退出应用</string>
+    
+    <!--home fragment-->
+    <string name="homef_title_bar_newest">最新</string>
+    <string name="homef_title_bar_hottest">最热</string>
+    <!--skill fragment-->
+    <string name="skill_title_bar_text">技巧</string>
+
+    <!--skill list fragment-->
+
+    <!--skill detail fragment-->
+    <string name="skill_detail_title_bar_text">详细</string>
+
 
 </resources>
