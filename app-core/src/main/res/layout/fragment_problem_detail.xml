@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/problem_detail_problem_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="题目"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/problem_detail_answer_wrapper"
+                    android:layout_below="@+id/problem_detail_problem_wrapper"
+                    android:layout_marginBottom="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="答案"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="50dp">
+
+        <Button android:id="@+id/problem_detail_praise_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:textSize="18sp"
+                android:text="@string/problem_detail_praise"/>
+
+        <Button android:id="@+id/problem_detail_collect_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="18sp"
+                android:text="@string/problem_detail_collect"/>
+
+        <Button android:id="@+id/problem_detail_share_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:textSize="18sp"
+                android:text="@string/problem_detail_share"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

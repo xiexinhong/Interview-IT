@@ -106,11 +106,7 @@ public class SlidingMenu extends HorizontalScrollView {
     public boolean onTouchEvent(MotionEvent ev) {
         if(ev != null && ev.getAction() ==  MotionEvent.ACTION_UP) {
                 int scroolX = getScrollX();
-//                Log.i("xxh","mMenuHalfWidth = "+mMenuHalfWidth);
-//                Log.i("xxh","mMenuHalfWidth*2*0.3 = "+(mMenuHalfWidth*2*0.3));
-//                Log.i("xxh","scroolX = "+scroolX);
-//                Log.i("xxh","mMenuWidth = "+mMenuWidth);
-//                Log.i("xxh","isOpen = "+isOpen);
+
                 if(isOpen){
                     if(scroolX > mMenuHalfWidth*2*0.2) {
                         this.smoothScrollTo(mMenuWidth, 0);
@@ -171,5 +167,10 @@ public class SlidingMenu extends HorizontalScrollView {
         ViewHelper.setPivotY(mContent, mContent.getHeight() / 2);
         ViewHelper.setScaleX(mContent, rightScale);
         ViewHelper.setScaleY(mContent, rightScale);
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        return false;
     }
 }

@@ -23,5 +23,12 @@
     <!--skill detail fragment-->
     <string name="skill_detail_title_bar_text">详细</string>
 
+    <!--category fragment-->
+    <string name="category_title_bar_text">分类</string>
+
+    <!--problem detail fragment-->
+    <string name="problem_detail_praise">赞</string>
+    <string name="problem_detail_collect">收藏</string>
+    <string name="problem_detail_share">分享</string>
 
 </resources>

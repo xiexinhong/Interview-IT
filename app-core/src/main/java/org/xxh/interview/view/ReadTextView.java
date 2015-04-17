@@ -1,11 +1,14 @@
 package org.xxh.interview.view;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import com.nineoldandroids.view.ViewHelper;
 
@@ -35,17 +38,30 @@ public class ReadTextView extends TextView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-//        if(event.getAction() == MotionEvent.ACTION_DOWN) {
-//            scale = scale + 0.1f;
-//            ViewHelper.setScaleX(ReadTextView.this, scale);
-//            ViewHelper.setScaleY(ReadTextView.this, scale);
-//        }
-//        if(event.getAction() == MotionEvent.ACTION_UP){
-//            scale = scale - 0.1f;
-//            ViewHelper.setScaleX(ReadTextView.this, scale);
-//            ViewHelper.setScaleY(ReadTextView.this, scale);
-//        }
+        System.out.println("w = "+getMeasuredWidth());
+        System.out.println("h = "+getMeasuredHeight());
+        if(scale==1) {
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                ObjectAnimator animatorX = ObjectAnimator.ofFloat(this, "scaleX", 1f, 1.2f);
+                ObjectAnimator animatorY = ObjectAnimator.ofFloat(this, "scaleY", 1f, 1.2f);
+                AnimatorSet mSet = new AnimatorSet();
+                mSet.playTogether(animatorX,animatorY);
+                mSet.setDuration(500);
+                mSet.start();
+                ViewGroup.LayoutParams params= getLayoutParams();
+                params.height =(int)(params.height * 1.2f);
+                params.width =(int) (params.width * 1.2f);
+                setLayoutParams(params);
+                scale++;
+                invalidate();
+            }
+        }
+
+        System.out.println("currentw = "+getMeasuredWidth());
+        System.out.println("currenth = "+getMeasuredHeight());
+
         return super.onTouchEvent(event);
+
 
     }
 
