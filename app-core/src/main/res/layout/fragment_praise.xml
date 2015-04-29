@@ -2,19 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-    <LinearLayout
-            android:id="@+id/praise_linear_layout"
-            android:orientation="vertical"
+
+    <include android:id="@+id/praise_title" layout="@layout/title_choose_bar"></include>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/praise_viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:background="#945771">
-        <org.xxh.interview.view.ReadTextView
-                  android:layout_width="100dp"
-                  android:layout_height="100dp"
-                  android:id="@+id/praise_txt"
-                  android:background="#223771"
-                  android:text="asdfadasdfasdfasdf"/>
-    </LinearLayout>
+            android:layout_below="@+id/praise_title">
+    </android.support.v4.view.ViewPager>
+
 </RelativeLayout>
 

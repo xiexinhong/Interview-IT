@@ -1,20 +1,18 @@
 package org.xxh.interview.interviewee.adapter;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.TextView;
-import org.xxh.interview.MainActivity;
 import org.xxh.interview.R;
 import org.xxh.interview.app.InterviewApplication;
 import org.xxh.interview.interviewee.activity.TerminalActivity;
+import org.xxh.interview.interviewee.fragment.ExperienceUploadFragment;
 import org.xxh.interview.interviewee.fragment.LabelFragment;
 import org.xxh.interview.interviewee.fragment.PraiseFragment;
-import org.xxh.interview.interviewee.fragment.UploadFragment;
+import org.xxh.interview.interviewee.fragment.ProblemUploadFragment;
 import org.xxh.interview.utils.Methods.Methods;
 
 import java.util.ArrayList;
@@ -39,7 +37,8 @@ public class MenuAdapter extends BaseAdapter {
 
     private void initData() {
         datas.add(Methods.getResourceString(R.string.home_menu_label));
-        datas.add(Methods.getResourceString(R.string.home_menu_upload_content));
+        datas.add(Methods.getResourceString(R.string.home_menu_upload_problem_content));
+        datas.add(Methods.getResourceString(R.string.home_menu_upload_experience_content));
         datas.add(Methods.getResourceString(R.string.home_menu_praise));
         datas.add(Methods.getResourceString(R.string.home_menu_store));
         datas.add(Methods.getResourceString(R.string.home_menu_setting));
@@ -95,16 +94,20 @@ public class MenuAdapter extends BaseAdapter {
                         TerminalActivity.showFragment(mActivity, LabelFragment.class,null);
                         break;
                     case 1:
-                        TerminalActivity.showFragment(mActivity, UploadFragment.class,null);
+                        TerminalActivity.showFragment(mActivity, ProblemUploadFragment.class,null);
                         break;
                     case 2:
-                        TerminalActivity.showFragment(mActivity, PraiseFragment.class,null);
+                        TerminalActivity.showFragment(mActivity, ExperienceUploadFragment.class,null);
                         break;
                     case 3:
+                        TerminalActivity.showFragment(mActivity, PraiseFragment.class,null);
                         break;
                     case 4:
                         break;
                     case 5:
+                        break;
+                    case 6:
+                        android.os.Process.killProcess(android.os.Process.myPid());
                         break;
                 }
             }

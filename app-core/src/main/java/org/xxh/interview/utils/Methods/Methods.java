@@ -1,5 +1,7 @@
 package org.xxh.interview.utils.Methods;
 
+import android.content.DialogInterface;
+import android.widget.Toast;
 import org.xxh.interview.app.GlobalVariables;
 import org.xxh.interview.app.InterviewApplication;
 
@@ -23,6 +25,14 @@ public class Methods {
 
     public static int computePixelsTextSize(int sp) {
         return (int) (sp * GlobalVariables.scaledDensity + 0.5);
+    }
+
+    public static void showToast(String msg,boolean isLong) {
+        Toast.makeText(InterviewApplication.getAppContext(),msg,isLong == true ? Toast.LENGTH_SHORT : Toast.LENGTH_SHORT).show();
+    }
+
+    public static void showToast(int resourcesId,boolean isLong) {
+        Toast.makeText(InterviewApplication.getAppContext(),resourcesId,isLong == true ? Toast.LENGTH_SHORT : Toast.LENGTH_SHORT).show();
     }
 }
 

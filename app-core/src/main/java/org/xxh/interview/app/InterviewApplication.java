@@ -18,9 +18,16 @@ public class InterviewApplication extends Application {
     }
 
 
-    public static Context getAppContext() {
+    public synchronized static Context getAppContext() {
+        if(mContext == null) {
+            mContext = new InterviewApplication();
+        }
         return mContext;
     }
+
+
+
+
 
 
 }

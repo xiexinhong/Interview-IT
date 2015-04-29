@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar"></include>
+
+    <!--选择类别-->
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:text="@string/upload_choose_category"/>
+    <EditText android:id="@+id/upload_problem_category"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/upload_choose_category"/>
+
+
+    <!--选择标签-->
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:text="@string/upload_choose_tag"/>
+    <EditText android:id="@+id/upload_problem_tag"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/upload_choose_tag"/>
+
+    <!--问题描述-->
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:text="@string/upload_problem_title"/>
+    <EditText android:id="@+id/upload_problem_title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/upload_problem_title"/>
+
+    <!--参考答案-->
+    <TextView android:id="@+id/upload_problem_answer"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:text="@string/upload_problem_answer"/>
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/upload_problem_answer"/>
+
+    <Button android:id="@+id/upload_problem_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:text="@string/str_submit"/>
+</LinearLayout>
+
+

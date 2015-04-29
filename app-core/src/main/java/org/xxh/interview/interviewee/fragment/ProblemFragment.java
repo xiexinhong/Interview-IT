@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -18,6 +19,7 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import org.xxh.interview.R;
 import org.xxh.interview.interviewee.activity.TerminalActivity;
+import org.xxh.interview.interviewee.activity.base.BaseFragmentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +33,11 @@ public class ProblemFragment extends Fragment {
     /***视图*******************************************/
     @ViewInject(R.id.problem_pull_listview)
     private PullToRefreshListView mListVew;
+
+    @ViewInject(R.id.problem_back_imgbtn)
+    private ImageView mBackImg;
     /***控制*******************************************/
+    private BaseFragmentActivity mActivity;
     private ArrayAdapter<String> mAdapter;
     private Handler mHandler;
     /***数据*******************************************/
@@ -40,6 +46,7 @@ public class ProblemFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mActivity = (BaseFragmentActivity) getActivity();
     }
 
     public static void showFragment(Context context,Bundle args) {
@@ -51,6 +58,7 @@ public class ProblemFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_problem,null);
         ViewUtils.inject(this,view);
         initViewData();
+        setListener();
         mHandler = new Handler();
         return view;
     }
@@ -99,6 +107,14 @@ public class ProblemFragment extends Fragment {
 //
 //        }
 //    }
+    private void setListener() {
+        mBackImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mActivity.finish();
+            }
+        });
+    }
 
     private void parseData(String[] data) {
         for(String str : data) {

@@ -2,6 +2,7 @@ package org.xxh.interview.interviewee.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
+import android.view.KeyEvent;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import org.xxh.interview.R;
@@ -11,6 +12,7 @@ import org.xxh.interview.interviewee.fragment.CategoryFragment;
 import org.xxh.interview.interviewee.fragment.ExperienceFragment;
 import org.xxh.interview.interviewee.fragment.HomeFragmet;
 import org.xxh.interview.interviewee.fragment.SkillFragment;
+import org.xxh.interview.utils.Methods.Methods;
 import org.xxh.interview.view.SlidingMenu;
 
 /**
@@ -24,8 +26,8 @@ public class HomeActivity extends BaseFragmentActivity {
     private SlidingMenu mSlidingMenu;
     private ListView mMenuListView;
     private MenuAdapter mMenuAdapter;
-    /*****************************************/
-
+    /***控制**************************************/
+    private long mBackOldTime;
 
 
     @Override
@@ -61,4 +63,19 @@ public class HomeActivity extends BaseFragmentActivity {
         mSlidingMenu.menuTrigger();
     }
 
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        long tmp = 0l;
+        if(keyCode == KeyEvent.KEYCODE_BACK) {
+            tmp = System.currentTimeMillis();
+            if(mBackOldTime + 1000 < tmp) {
+                Methods.showToast(R.string.str_exit_app,false);
+            } else {
+                return super.onKeyUp(keyCode, event);
+            }
+            mBackOldTime = tmp;
+        }
+        return false;
+    }
 }

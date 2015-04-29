@@ -41,7 +41,8 @@ public class CategoryFragment extends Fragment {
     }
 
     public void initView() {
-        String[] data = new String[]{"Android","IOS","Java","C/C++","PHP","MySQL","Python","JavaScript","Ruby"};
+        String[] data = new String[]{"Android","IOS","Java","C/C++","PHP","MySQL","Python","JavaScript","Ruby",
+                "Android","IOS","Java","C/C++","PHP","MySQL","Python","JavaScript","Ruby"};
         mAdapter = new CategoryAdapter(mActiivty);
         mListView.setAdapter(mAdapter);
         mAdapter.setData(mAdapter.parseData(data));

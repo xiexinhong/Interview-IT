@@ -3,9 +3,22 @@
                 xmlns:pullto="http://schemas.android.com/apk/com.handmark.pulltorefresh.library"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/experience_title_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/title_bar_height"
+                    android:background="@color/title_bar"
+                    android:gravity="center">
+        <TextView android:id="@+id/experience_title_content_txt"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@android:color/white"
+                  android:text="@string/experience_title_bar_txt"
+                  android:textSize="20sp"/>
+    </RelativeLayout>
+
     <com.handmark.pulltorefresh.library.PullToRefreshListView
             android:id="@+id/experience_pull_listview"
-            pullto:ptrRefreshableViewBackground="#534865"
+            android:layout_below="@+id/experience_title_bar"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
     </com.handmark.pulltorefresh.library.PullToRefreshListView>

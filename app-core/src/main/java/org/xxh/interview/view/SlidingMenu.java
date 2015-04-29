@@ -25,6 +25,8 @@ public class SlidingMenu extends HorizontalScrollView {
     private Context mContext;
     //屏幕宽度
     private int mScreenWith;
+    //手势方向判断
+    private GestureDetector mGestureDetector = new GestureDetector(mContext,new JudjeGestureDirection());
     //dp
     private int mMenuRightPadding = 50;
     //菜单的宽度和高度
@@ -171,6 +173,17 @@ public class SlidingMenu extends HorizontalScrollView {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        return false;
+        return super.onInterceptTouchEvent(ev) && mGestureDetector.onTouchEvent(ev);
+    }
+
+    class JudjeGestureDirection extends GestureDetector.SimpleOnGestureListener {
+
+        @Override
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            if(Math.abs(distanceY) < Math.abs(distanceX)) {
+                return true;
+            }
+            return false;
+        }
     }
 }
