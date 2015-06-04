@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/libmodule/Android-PullToRefresh/Android-PullToRefresh.iml" filepath="$PROJECT_DIR$/libmodule/Android-PullToRefresh/Android-PullToRefresh.iml" />
       <module fileurl="file://$PROJECT_DIR$/Interview-IT.iml" filepath="$PROJECT_DIR$/Interview-IT.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-core/app-core.iml" filepath="$PROJECT_DIR$/app-core/app-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libModule/libModule.iml" filepath="$PROJECT_DIR$/libModule/libModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/libmodule/libModule.iml" filepath="$PROJECT_DIR$/libmodule/libModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/libmodule/Android-PullToRefresh/libModule-Android-PullToRefresh.iml" filepath="$PROJECT_DIR$/libmodule/Android-PullToRefresh/libModule-Android-PullToRefresh.iml" />
       <module fileurl="file://$PROJECT_DIR$/libModule/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/libModule/pulltorefresh/pulltorefresh.iml" />
