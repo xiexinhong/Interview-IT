@@ -10,7 +10,7 @@ import android.widget.TextView;
 import org.xxh.interview.R;
 import org.xxh.interview.interviewee.activity.LevelTwoActivity;
 import org.xxh.interview.interviewee.activity.base.BaseFragmentActivity;
-import org.xxh.interview.interviewee.fragment.SkillDetailFragment;
+import org.xxh.interview.interviewee.fragment.skill.SkillDetailFragment;
 
 import java.util.ArrayList;
 import java.util.List;

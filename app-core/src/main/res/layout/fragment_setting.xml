@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/default_background">
+    <include android:id="@+id/title_bar" layout="@layout/title_bar">
+    </include>
+    <!--默认答案显示-->
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="15sp"
+                  android:text="@string/setting_is_show_answer"/>
+
+    </RelativeLayout>
+
+    <!--意见反馈-->
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="15sp"
+                  android:layout_alignParentLeft="true"
+                  android:text="@string/setting_feedback"/>
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/icon_right_arrow"
+                   android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:paddingLeft="15dp"
+          android:background="@color/default_background">
+    </View>
+
+    <!--版本更新-->
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:textSize="15sp"
+                  android:text="@string/setting_update_version"/>
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/icon_right_arrow"/>
+
+    </RelativeLayout>
+
+    <View android:layout_width="wrap_content"
+          android:layout_height="1dp"
+          android:paddingLeft="15dp"
+          android:background="@color/default_background">
+    </View>
+
+    <!--关于面试-->
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:textSize="15sp"
+                  android:text="@string/setting_app_about"/>
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/icon_right_arrow"/>
+    </RelativeLayout>
+
+    <!--退出-->
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:background="@color/white">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="15sp"
+                  android:textColor="@color/global_style_color"
+                  android:text="@string/setting_close_app"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

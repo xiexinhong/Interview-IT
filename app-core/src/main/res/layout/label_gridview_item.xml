@@ -13,7 +13,10 @@
               android:layout_gravity="center"
               android:layout_width="match_parent"
               android:layout_height="30dp"
-              android:textSize="18sp"
+              android:textSize="15sp"
+              android:singleLine="true"
+              android:maxLength="12"
+              android:ellipsize="end"
               android:textColor="@android:color/white"
               android:gravity="center"/>
 </FrameLayout>

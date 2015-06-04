@@ -7,9 +7,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import org.xxh.interview.R;
 import org.xxh.interview.interviewee.activity.base.BaseFragmentActivity;
-import org.xxh.interview.interviewee.fragment.ProblemFragment;
+import org.xxh.interview.interviewee.fragment.category.ProblemFragment;
+import org.xxh.interview.utils.json.JsonArray;
+import org.xxh.interview.utils.json.JsonObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,11 +83,12 @@ public class CategoryAdapter extends BaseAdapter {
     }
 
     private void initViewData(CategoryViewHolder holder,int position) {
-        holder.mCategoryImg.setImageResource(R.drawable.skill_list_01);
+        ImageLoader.getInstance().displayImage(mData.get(position).imgUrl,holder.mCategoryImg);
         holder.mNameTxt.setText(mData.get(position).CategoryName);
     }
 
     public class CategoryItem {
+        int id;
         String imgUrl;
         String CategoryName;
     }
@@ -94,14 +98,22 @@ public class CategoryAdapter extends BaseAdapter {
         TextView mNameTxt;
     }
 
-    public List<CategoryItem> parseData(String[] args){
-        List<CategoryItem> data = new ArrayList<CategoryItem>();
-        CategoryItem item = null;
-        for(String str : args ) {
-            item =  new CategoryItem();
-            item.CategoryName = str;
-            data.add(item);
+    public List<CategoryItem> parseData(JsonArray array){
+
+        if(array != null) {
+            List<CategoryItem> data = new ArrayList<CategoryItem>();
+            JsonObject[] objs = new JsonObject[array.size()];
+            array.copyInto(objs);
+            CategoryItem item = null;
+            for(JsonObject obj : objs ) {
+                item =  new CategoryItem();
+                item.id = (int)obj.getNum("id");
+                item.CategoryName = obj.getString("name");
+                item.imgUrl = obj.getString("iconUrl");
+                data.add(item);
+            }
+            return data;
         }
-        return data;
+        return null;
     }
 }

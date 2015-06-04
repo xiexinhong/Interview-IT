@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--item 的背景色-->
+    <item android:drawable="@color/white">
+    </item>
+
+    <!--分割線的北京色-->
+    <item android:drawable="@color/divider_line_color"
+          android:left="50dp">
+    </item>
+</layer-list>

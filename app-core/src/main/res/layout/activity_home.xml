@@ -9,38 +9,65 @@ http://schemas.android.com/apk/res/org.xxh.interview-->
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
-        android:background="#CCFFFF"
         xxhspace:right_padding="50dp">
     <LinearLayout android:orientation="horizontal"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent"
+                  android:background="@drawable/home_bg"
                   android:gravity="center">
 
         <!--菜单处理-->
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="match_parent"
                       android:orientation="vertical"
-                      android:layout_weight="1"
-                      android:background="#DAA520">
-            <LinearLayout android:layout_width="match_parent"
+                      android:layout_weight="1">
+            <RelativeLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:layout_marginTop="@dimen/home_head_image_margin_top"
-                          android:orientation="vertical"
-                          android:gravity="center">
-                    <org.xxh.interview.view.RoundImageView
-                            android:layout_centerInParent="true"
-                            android:layout_width="@dimen/home_head_image_width"
-                            android:layout_height="@dimen/home_head_image_height"
-                            android:src="@drawable/head_default"/>
-                    <TextView android:layout_width="match_parent"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginTop="@dimen/home_head_image_margin_top">
+
+                    <ImageView android:id="@+id/home_logo_img"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/ic_launcher"
+                               android:layout_alignParentLeft="true"/>
+
+                    <TextView android:id="@+id/home_username_tv"
+                              android:layout_width="match_parent"
                               android:layout_height="wrap_content"
-                              android:gravity="center"
-                              android:text="姓名：谢欣宏"/>
-            </LinearLayout>
+                              android:layout_toRightOf="@+id/home_logo_img"
+                              android:layout_marginLeft="15dp"
+                              android:layout_centerVertical="true"
+                              android:gravity="left"
+                              android:textSize="20sp"
+                              android:textColor="@color/white"
+                              android:visibility="gone"/>
+
+                    <TextView android:id="@+id/home_login_and_register_tv"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_toRightOf="@+id/home_logo_img"
+                              android:layout_marginLeft="15dp"
+                              android:layout_centerVertical="true"
+                              android:gravity="left"
+                              android:textSize="20sp"
+                              android:textColor="@color/white"
+                              android:text="@string/home_menu_login_and_register"/>
+
+            </RelativeLayout>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginLeft="15dp"
+                  android:background="@color/default_background">
+
+            </View>
             <ListView android:id="@+id/home_menu_listview"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent"
+                      android:layout_marginTop="20dp"
                       android:layout_marginLeft="@dimen/home_item_left"
+                      android:divider="@null"
+                      android:background="@null"
                       android:layout_marginRight="@dimen/home_item_right">
             </ListView>
         </LinearLayout>
@@ -48,7 +75,12 @@ http://schemas.android.com/apk/res/org.xxh.interview-->
         <!--主页内容-->
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="match_parent"
+                      android:orientation="vertical"
                       android:layout_weight="1">
+
+            <View   android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#dedede"/>
 
             <android.support.v4.app.FragmentTabHost
                     android:id="@android:id/tabhost"
@@ -68,7 +100,7 @@ http://schemas.android.com/apk/res/org.xxh.interview-->
                                 android:layout_width="fill_parent"
                                 android:layout_height="@dimen/home_tab_hight"
                                 android:divider="@null"
-                                android:background="@color/title_bar"
+                                android:background="@color/white"
                                 android:orientation="horizontal"
                                 android:layout_alignParentBottom="true"/>
                 </RelativeLayout>

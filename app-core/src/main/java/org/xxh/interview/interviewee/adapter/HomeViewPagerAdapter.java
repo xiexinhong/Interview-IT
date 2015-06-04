@@ -3,7 +3,7 @@ package org.xxh.interview.interviewee.adapter;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
-import org.xxh.interview.interviewee.fragment.HomeFragmet;
+import org.xxh.interview.interviewee.fragment.home.HomeFragmet;
 
 /**
  * Created by Administrator on 2015/3/26.

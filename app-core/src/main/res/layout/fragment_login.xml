@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E3E3E3">
+
+    <include android:id="@+id/title_include"
+             layout="@layout/title_bar">
+    </include>
+
+    <ImageView android:id="@+id/login_logo_iv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/title_include"
+               android:layout_centerHorizontal="true"
+               android:src="@drawable/ic_launcher"/>
+
+    <LinearLayout android:id="@+id/username_and_password_wrap"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_below="@+id/login_logo_iv"
+                  android:background="@color/white">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center">
+
+            <ImageView android:id="@+id/login_username_iv"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/login_username"/>
+
+            <EditText android:id="@+id/login_username_et"
+                      android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:layout_marginLeft="15dp"
+                      android:singleLine="true"
+                      android:textSize="15sp"
+                      android:background="@null"
+                      android:hint="@string/login_input_username"/>
+        </LinearLayout>
+
+        <View android:id="@+id/login_divider_one"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginLeft="30dp"
+              android:layout_marginRight="30dp"
+              android:background="@color/default_background">
+        </View>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center">
+
+            <ImageView android:id="@+id/login_password_iv"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/login_password"/>
+
+            <EditText android:id="@+id/login_password_et"
+                      android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:layout_marginLeft="15dp"
+                      android:singleLine="true"
+                      android:textSize="15sp"
+                      android:background="@null"
+                      android:hint="@string/login_input_password"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button android:id="@+id/login_submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/username_and_password_wrap"
+            android:background="@drawable/login_btn_bg"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="@string/login_login_submit"/>
+
+    <TextView android:id="@+id/login_register_tv"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:layout_marginBottom="50dp"
+              android:layout_centerHorizontal="true"
+              android:textColor="@color/global_style_color"
+              android:textSize="15dp"
+              android:text="@string/login_register_submit"/>
+
+</RelativeLayout>

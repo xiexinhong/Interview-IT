@@ -125,6 +125,7 @@ public class SlidingMenu extends HorizontalScrollView {
                     this.smoothScrollTo(mMenuWidth, 0);
                 }
             }
+            setContentFocus();
             return true;
         }
         return super.onTouchEvent(ev);
@@ -151,6 +152,7 @@ public class SlidingMenu extends HorizontalScrollView {
         }else {
             openMenu();
         }
+        setContentFocus();
     }
 
     @Override
@@ -173,7 +175,7 @@ public class SlidingMenu extends HorizontalScrollView {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        return super.onInterceptTouchEvent(ev) && mGestureDetector.onTouchEvent(ev);
+        return  super.onInterceptTouchEvent(ev) && mGestureDetector.onTouchEvent(ev);
     }
 
     class JudjeGestureDirection extends GestureDetector.SimpleOnGestureListener {
@@ -184,6 +186,16 @@ public class SlidingMenu extends HorizontalScrollView {
                 return true;
             }
             return false;
+        }
+    }
+
+    private void setContentFocus() {
+        if(isOpen) {
+            mContent.setFocusable(false);
+            mContent.setFocusableInTouchMode(false);
+        } else {
+            mContent.setFocusable(true);
+            mContent.setFocusableInTouchMode(true);
         }
     }
 }

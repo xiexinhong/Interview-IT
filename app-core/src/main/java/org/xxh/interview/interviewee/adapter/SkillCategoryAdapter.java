@@ -8,10 +8,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import org.xxh.interview.R;
 import org.xxh.interview.interviewee.activity.TerminalActivity;
 import org.xxh.interview.interviewee.activity.base.BaseFragmentActivity;
-import org.xxh.interview.interviewee.fragment.SkillListFragment;
+import org.xxh.interview.interviewee.fragment.skill.SkillListFragment;
+import org.xxh.interview.utils.json.JsonArray;
+import org.xxh.interview.utils.json.JsonObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +30,14 @@ public class SkillCategoryAdapter extends BaseAdapter {
 
     public SkillCategoryAdapter(BaseFragmentActivity activity) {
         mActivity = activity;
-        initData();
+    }
+
+    public void setData(List<SkillCategoryItem> datas) {
+        synchronized (this.datas) {
+            this.datas.clear();
+            this.datas.addAll(datas);
+        }
+        notifyDataSetChanged();
     }
 
     @Override
@@ -77,30 +87,36 @@ public class SkillCategoryAdapter extends BaseAdapter {
     }
 
     private void setViewData(SkillViewHolder holder,int position) {
-        System.out.println("holder.mCategoryImg = "+holder.mCategoryImg);
-        holder.mCategoryImg.setBackgroundResource(R.drawable.skill_category_list_01);
+        ImageLoader.getInstance().displayImage(datas.get(position).imgUrl,holder.mCategoryImg);
         holder.mCategoryTxt.setText(datas.get(position).content);
         holder.mArrowImg.setBackgroundResource(R.drawable.icon_right_arrow);
     }
 
-    private void initData() {
-        String[] contents =  mActivity.getResources().getStringArray(R.array.skill_category_list);
-        SkillCategoryItem item = null;
-        for(int i=0;i<contents.length;i++) {
-            item = new SkillCategoryItem();
-            item.content = contents[i];
-            item.drawableId = R.drawable.skill_category_list_01;
-            datas.add(item);
-        }
-    }
+
 
     class SkillCategoryItem {
         int id;
-        int drawableId;
         String imgUrl;
         String content;
-
         public SkillCategoryItem() {}
+    }
+
+    public List<SkillCategoryItem> parseData(JsonArray array) {
+        if(array != null) {
+            List<SkillCategoryItem> items = new ArrayList<SkillCategoryItem>();
+            JsonObject[] objs = new JsonObject[array.size()];
+            SkillCategoryItem item = null;
+            array.copyInto(objs);
+            for(JsonObject obj : objs) {
+                item = new SkillCategoryItem();
+                item.id = (int)obj.getNum("id");
+                item.content = obj.getString("name");
+                item.imgUrl = obj.getString("iconUrl");
+                items.add(item);
+            }
+            return items;
+        }
+        return null;
     }
 
     class SkillViewHolder {
